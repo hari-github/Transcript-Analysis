@@ -1,5 +1,6 @@
 streamlit
 pandas
+langchain-groq
 langchain-core
 langchain
-langchain-groq
+openpyxl
