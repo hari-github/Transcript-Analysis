@@ -267,8 +267,8 @@ with st.sidebar:
         random.shuffle(total_files)
 
         # Requirement: 10 for discovery, rest in base
-        discovery_files = total_files[:5]
-        remaining_files = total_files[5:]
+        discovery_files = total_files[:10]
+        remaining_files = total_files[10:]
 
         for f in discovery_files:
             with open(os.path.join(DISCOVERY_DIR, f.name), "wb") as out:
@@ -450,3 +450,4 @@ if st.session_state.processed and user_api_key:
             st.info("Results will appear here after selection in the Discovery tab.")
 elif not user_api_key and st.session_state.processed:
     st.warning("Please enter your API key in the sidebar to begin processing.")
+
