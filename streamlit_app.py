@@ -248,7 +248,8 @@ with st.sidebar:
     model_options = ["llama-3.3-70b-versatile", "meta-llama/llama-4-maverick-17b-128e-instruct", "meta-llama/llama-4-maverick-17b-128e-instruct", "llama-3.1-8b-instant", "openai/gpt-oss-120b", "openai/gpt-oss-20b"]
 
 
-    user_api_key = st.text_input("Enter the Groq API key", type="password")
+    # user_api_key = st.text_input("Enter the Groq API key", type="password")
+    user_api_key = st.secrets["GROQ_API_KEY"]
     # Create the dropdown
     llm_model = st.selectbox("Choose a Model:", model_options)
 
